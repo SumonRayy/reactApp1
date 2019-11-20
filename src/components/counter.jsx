@@ -1,22 +1,23 @@
  import React, { Component } from 'react';
 
-class Counter extends Component {
+class valueer extends Component {
 
   state = {
-    count : 0,
+    value : this.props.value,
   };
 
 handleIncrement = () => {
   console.log("Increment Clicked!");
-  this.setState({ count : this.state.count + 1 })
+  this.setState({ value : this.state.value + 1 })
 };
 
 handleReset = () => {
   console.log("Reset to Zero");
-  this.setState({count: 0})
+  this.setState({value: 0})
 };
 
   render() {
+    console.log('props', this.props);
 
     return (
     <div>
@@ -31,20 +32,20 @@ handleReset = () => {
 
 colorChanger() {
   let colors =  "badge m-2 badge-";
-  colors += this.state.count === 0 ? "warning" : "primary";
+  colors += this.state.value === 0 ? "warning" : "primary";
   return colors;
 }
 
 
 
 numberDekhao() {
-  const { count } = this.state;
+  const { value } = this.state;
   const z = <h1>Zero</h1>;
-  const o = <h1>{count}</h1>;
-  return count === 0 ? z : o ;
+  const o = <h1>{value}</h1>;
+  return value === 0 ? z : o ;
 }
 
 
 }
 
-export default Counter;
+export default valueer;
