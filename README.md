@@ -1,6 +1,6 @@
-#My First React app
-This is My First React App Which basically Counts The multiple integer Numbers
+# My First React app
 
+This is My First React App Which basically Counts The multiple integer Numbers
 
 
 
